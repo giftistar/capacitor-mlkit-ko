@@ -1,8 +1,11 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { MLKitKoPlugin } from './definitions';
+import type { CapacitorMLKitPlugin } from './definitions';
 
-export class MLKitKoWeb extends WebPlugin implements MLKitKoPlugin {
+export class CapacitorMLKitWeb
+  extends WebPlugin
+  implements CapacitorMLKitPlugin
+{
   async echo(options: { value: string }): Promise<{ value: string }> {
     console.log('ECHO', options);
     return options;

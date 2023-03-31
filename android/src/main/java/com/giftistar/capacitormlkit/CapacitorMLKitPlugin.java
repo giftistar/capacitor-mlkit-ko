@@ -1,4 +1,4 @@
-package com.giftistar.capacitormlkitko;
+package com.giftistar.capacitormlkit;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
@@ -6,14 +6,21 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "MLKitKo")
-public class MLKitKoPlugin extends Plugin {
+@CapacitorPlugin(name = "CapacitorMLKit")
+public class CapacitorMLKitPlugin extends Plugin {
 
-    private MLKitKo implementation;
+    private CapacitorMLKit implementation;
 
-    public MLKitKoPlugin() {
-        implementation = new MLKitKo(getActivity());
+    public CapacitorMLKitPlugin() {
+
     }
+
+    @Override
+    public void load() {
+        super.load();
+        implementation = new CapacitorMLKit(bridge.getActivity());
+    }
+
 
     @PluginMethod
     public void echo(PluginCall call) {
@@ -25,13 +32,13 @@ public class MLKitKoPlugin extends Plugin {
 
     @PluginMethod
     public void ocr(PluginCall call) {
-        String image_uri = call.getString("image_uri");
+        String image_uri = call.getString("value");
         implementation.ocr(image_uri, call);
     }
 
     @PluginMethod
     public void barcode(PluginCall call) {
-        String image_uri = call.getString("image_uri");
+        String image_uri = call.getString("value");
         implementation.barcode(image_uri, call);
     }
 }

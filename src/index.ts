@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { MLKitKoPlugin } from './definitions';
+import type { CapacitorMLKitPlugin } from './definitions';
 
-const MLKitKo = registerPlugin<MLKitKoPlugin>('MLKitKo', {
-  web: () => import('./web').then(m => new m.MLKitKoWeb()),
+const CapacitorMLKit = registerPlugin<CapacitorMLKitPlugin>('CapacitorMLKit', {
+  web: () => import('./web').then(m => new m.CapacitorMLKitWeb()),
 });
 
 export * from './definitions';
-export { MLKitKo };
+export { CapacitorMLKit };

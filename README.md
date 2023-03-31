@@ -1,11 +1,11 @@
-# capacitor-mlkit-ko
+# capacitor-ml-kit
 
-mkkit ko version for capacitor
+mlkit
 
 ## Install
 
 ```bash
-npm install capacitor-mlkit-ko
+npm install capacitor-ml-kit
 npx cap sync
 ```
 

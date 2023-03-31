@@ -1,4 +1,4 @@
-export interface MLKitKoPlugin {
+export interface CapacitorMLKitPlugin {
   echo(options: { value: string }): Promise<{ value: string }>;
   ocr(image_uri: { value: string }): Promise<{ value: string }>;
   barcode(image_uri: { value: string }): Promise<{ value: string }>;

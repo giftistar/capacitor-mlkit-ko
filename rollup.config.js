@@ -4,7 +4,7 @@ export default {
     {
       file: 'dist/plugin.js',
       format: 'iife',
-      name: 'capacitorMLKitKo',
+      name: 'capacitorCapacitorMLKit',
       globals: {
         '@capacitor/core': 'capacitorExports',
       },

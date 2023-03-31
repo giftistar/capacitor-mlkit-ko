@@ -12,7 +12,6 @@ public class MLKitKoPlugin extends Plugin {
     private MLKitKo implementation;
 
     public MLKitKoPlugin() {
-
         implementation = new MLKitKo(getActivity());
     }
 
@@ -35,6 +34,4 @@ public class MLKitKoPlugin extends Plugin {
         String image_uri = call.getString("image_uri");
         implementation.barcode(image_uri, call);
     }
-
-
 }

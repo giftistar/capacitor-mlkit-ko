@@ -1,6 +1,6 @@
 {
   "name": "capacitor-mlkit-ko",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "mkkit ko version for capacitor",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",

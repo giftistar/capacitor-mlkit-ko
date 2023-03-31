@@ -25,13 +25,13 @@ public class MLKitKoPlugin extends Plugin {
 
     @PluginMethod
     public void ocr(PluginCall call) {
-        String image_uri = call.getString("image_uri");
+        String image_uri = call.getString("value");
         implementation.ocr(image_uri, call);
     }
 
     @PluginMethod
     public void barcode(PluginCall call) {
-        String image_uri = call.getString("image_uri");
+        String image_uri = call.getString("value");
         implementation.barcode(image_uri, call);
     }
 }

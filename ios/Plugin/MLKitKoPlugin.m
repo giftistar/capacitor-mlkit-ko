@@ -5,4 +5,6 @@
 // each method the plugin supports using the CAP_PLUGIN_METHOD macro.
 CAP_PLUGIN(MLKitKoPlugin, "MLKitKo",
            CAP_PLUGIN_METHOD(echo, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(ocr, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(barcode, CAPPluginReturnPromise);
 )

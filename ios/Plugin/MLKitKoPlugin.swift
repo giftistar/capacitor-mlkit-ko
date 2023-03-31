@@ -15,4 +15,17 @@ public class MLKitKoPlugin: CAPPlugin {
             "value": implementation.echo(value)
         ])
     }
+    
+    @objc func ocr(_ call: CAPPluginCall) {
+        DispatchQueue.main.async {
+            self.implementation.ocr(call)
+        }
+    }
+    
+    @objc func barcode(_ call: CAPPluginCall) {
+        DispatchQueue.main.async {
+            self.implementation.barcode(call)
+        }
+    }
+    
 }
